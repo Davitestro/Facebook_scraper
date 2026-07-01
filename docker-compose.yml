@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  scraper:
+    build: .
+    container_name: facebook-scraper
+    environment:
+      - FACEBOOK_EMAIL=${FACEBOOK_EMAIL}
+      - FACEBOOK_PASSWORD=${FACEBOOK_PASSWORD}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
+    shm_size: 2gb
+    restart: unless-stopped
