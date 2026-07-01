@@ -1,157 +1,125 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-01T15:12:00.369955",
-    "total_items": 24
+    "scraped_at": "2026-07-01T20:55:51.857660",
+    "total_items": 5
   },
   "data": {
-    "url": "https://www.facebook.com/facebook",
+    "url": "https://www.facebook.com/Reuters",
     "posts": [
       {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
+        "post_id": "-737537798",
+        "author": "Reuters",
+        "text": "French government seen facing no-confidence vote over heatwave handling... Ещё",
+        "full_text": "French government seen facing no-confidence vote over heatwave handling... Ещё",
+        "publish_date": "2026-07-01T20:55:26.824551",
+        "timestamp_iso": "2026-07-01T20:55:26.824551",
+        "link": "https://www.facebook.com/stories/103424214981653/UzpfSVNDOjg4MDI4ODUyNzkzMjMzNQ==/?view_single=false&__cft__[0]=AZZiuwUulsZpLP069ktZpgFsViybcmKH1GoA5qoYRrQxq75woc3JXYYtXVwKqAmthcmCPxRqarAk5LxnejdPb83fIULvdZGAlc-hpE6SrHUFykqUtjSUIoijHSonC7Gi8CYVMSXMRGeOc5qurFxlLBSXI_awEOIECMdZQzDGrOWrVDGmc6dUsfwG3qyM0I5CZ3c&__tn__=%3C%3C%2CP-R",
         "likes": 0,
         "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "images": [
+          "https://scontent.fevn12-1.fna.fbcdn.net/v/t39.99422-6/736225749_2007943183190744_2434283108072912468_n.png?stp=dst-jpg_tt6&cstp=mx1200x628&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rYv8AqCP-5sQ7kNvwEEkFqP&_nc_oc=Adrup2IVkjmR49d7QkasXv-HmHJXFKvphxmEBgoqbLdLT9zSofBgKY_jRxFQFOjTW9Y&_nc_zt=14&_nc_ht=scontent.fevn12-1.fna&_nc_gid=qGDE4qM8eK90Xyc6uSEWbQ&_nc_ss=7b2a8&oh=00_AQAu2ocLhCN2J1HVfj6GL5jCEeyUah9SaJMRhy7wh5SNYA&oe=6A4B04B7"
+        ],
+        "has_video": false,
+        "scraped_at": "2026-07-01T20:55:51.857170",
+        "word_count": 10,
+        "char_count": 78,
+        "hashtags": [],
+        "mentions": []
       },
       {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
+        "post_id": "0",
+        "author": "Unknown",
+        "text": "",
+        "full_text": "",
+        "publish_date": "2026-07-01T20:55:32.249808",
+        "timestamp_iso": "2026-07-01T20:55:32.249808",
+        "link": "",
         "likes": 0,
         "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "images": [],
+        "has_video": false,
+        "scraped_at": "2026-07-01T20:55:51.857497",
+        "word_count": 0,
+        "char_count": 0,
+        "hashtags": [],
+        "mentions": []
       },
       {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
+        "post_id": "-101004426",
+        "author": "Reuters",
+        "text": "https://reut.rs/3TcDWX3",
+        "full_text": "https://reut.rs/3TcDWX3",
+        "publish_date": "2026-07-01T20:55:36.668245",
+        "timestamp_iso": "2026-07-01T20:55:36.668245",
+        "link": "https://www.facebook.com/stories/103424214981653/UzpfSVNDOjg4MDI4ODUyNzkzMjMzNQ==/?view_single=false&__cft__[0]=AZZQeRze9psCd8feZs6YZTVu5U-S3mt5kyWCeflCp6iyGfrAFp7raK6xEK_D7lP2eudWDH1N6C_V4rUAf-ibPdwwak2gP9WpgQFh6-M7D45eXKyu3qcP7ifPvrs5HRfvFTsBWH5ROSCTLnGmUWtdIZnUqxf0UvxAAk5UuHPlWQWB8z7qcVKlRVUr-SvT25THutrEQwfZRJHDOvgsDPzg7Kth&__tn__=%3C%3C%2CP-R",
         "likes": 0,
         "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "images": [
+          "https://scontent.fevn12-1.fna.fbcdn.net/v/t15.5256-10/732018668_1381067310747181_256716079457244176_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1080&ctp=p960x960&_nc_cat=107&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=LLFYh9lLsegQ7kNvwEeeuFQ&_nc_oc=AdrJJAiGyeW0BoJWHDLqVmhuWYVXISzL3TQRT0MDPin1X7gMfQKgquz98sxQeFGfY3k&_nc_zt=23&_nc_ht=scontent.fevn12-1.fna&_nc_gid=FVPwQdAGfqWX5qhszhASzg&_nc_ss=7b2a8&oh=00_AQAEOBYtIjmwh9zjtyL6n9WtCDNo5fBObkpjll3pXzLDtw&oe=6A4B0EF0"
+        ],
+        "has_video": true,
+        "scraped_at": "2026-07-01T20:55:51.857520",
+        "word_count": 1,
+        "char_count": 23,
+        "hashtags": [],
+        "mentions": []
       },
       {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
+        "post_id": "4420094803",
+        "author": "Gerald Fitch",
+        "text": "Возможно, Суифт сможет сделать это, мелодия Мел Брукса из \"Продюсеров\", \"Весна для Мамдани\"!",
+        "full_text": "Возможно, Суифт сможет сделать это, мелодия Мел Брукса из \"Продюсеров\", \"Весна для Мамдани\"!",
+        "publish_date": "2026-07-01T20:55:39.159332",
+        "timestamp_iso": "2026-07-01T20:55:39.159332",
+        "link": "https://www.facebook.com/kwame.hussein.9?comment_id=Y29tbWVudDoxNTk1MDY0Njc1ODE3NTkyXzE4MTY3OTUxMzYzNjgwNDA%3D&__cft__[0]=AZZQeRze9psCd8feZs6YZTVu5U-S3mt5kyWCeflCp6iyGfrAFp7raK6xEK_D7lP2eudWDH1N6C_V4rUAf-ibPdwwak2gP9WpgQFh6-M7D45eXKyu3qcP7ifPvrs5HRfvFTsBWH5ROSCTLnGmUWtdIZnUqxf0UvxAAk5UuHPlWQWB8z7qcVKlRVUr-SvT25THutrEQwfZRJHDOvgsDPzg7Kth&__tn__=R-R",
         "likes": 0,
         "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "images": [],
+        "has_video": false,
+        "scraped_at": "2026-07-01T20:55:51.857533",
+        "word_count": 13,
+        "char_count": 92,
+        "hashtags": [],
+        "mentions": []
       },
       {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
+        "post_id": "7227512114",
+        "author": "Reuters",
+        "text": "Small boats with armed people approach vessels off Yemen, UKMTO says... Ещё",
+        "full_text": "Small boats with armed people approach vessels off Yemen, UKMTO says... Ещё",
+        "publish_date": "2026-07-01T20:55:39.833947",
+        "timestamp_iso": "2026-07-01T20:55:39.833947",
+        "link": "https://www.facebook.com/stories/103424214981653/UzpfSVNDOjg4MDI4ODUyNzkzMjMzNQ==/?view_single=false&__cft__[0]=AZYFLMFgRRqFEFTnXBgpQ__Vs6eGv6z9wMdCM0fPS5A9ee6vX29VGHPlt-si4cpLhby61gTigqhO2GzQIkTrkTLHa1IlvXWJCR3zbtFB1kU8x6WN2BCO1fQdXsvoxIjSc7VDZoJTIj3wgzLWYd-YdNcVUk_8Tmpg8QXxOixlUYXv4ThCdcMfHju0rJteJ-9OwEg&__tn__=%3C%3C%2CP-R",
         "likes": 0,
         "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Facebook\n 16h\n  ·\nIf you're DMing each other memes, just make it Facebook official already\nAll reactions:\n16K\n3.2K\n834\nLike\nComment\nView more comments\nTop fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63\nView all 2 replies",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
-      },
-      {
-        "text": "Top fan\nLove the Animals\nI’m not ready for that kind of commitment. What if their meme taste falls off next week?\n16h\n63",
-        "likes": 0,
-        "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "images": [
+          "https://scontent.fevn12-1.fna.fbcdn.net/v/t39.99422-6/735831876_2890385484651392_6075206425596704173_n.png?stp=dst-jpg_tt6&cstp=mx1200x628&ctp=s960x960&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lY9pR4cimk4Q7kNvwFY29Vi&_nc_oc=Adpbf_clQ0aBTLPSXG361Zu24D9TI2COeAtmhtON3NnH6apCFVY76gBCqfzNR0zO8pk&_nc_zt=14&_nc_ht=scontent.fevn12-1.fna&_nc_gid=FVPwQdAGfqWX5qhszhASzg&_nc_ss=7b2a8&oh=00_AQD1humMYEObTXeFsqjqy_RC_sn6gkTp67aW86BncYoF_g&oe=6A4B0905"
+        ],
+        "has_video": false,
+        "scraped_at": "2026-07-01T20:55:51.857550",
+        "word_count": 12,
+        "char_count": 75,
+        "hashtags": [],
+        "mentions": []
       }
     ],
-    "total_found": 24,
-    "type": "page"
+    "total_found": 5,
+    "type": "page",
+    "page_title": "Facebook",
+    "scroll_attempts": 2,
+    "target_reached": false,
+    "duplicates_removed": 0,
+    "scraping_metadata": {
+      "scraped_at": "2026-07-01T20:55:51.857567",
+      "method": "selenium",
+      "max_posts": 20,
+      "url": "https://www.facebook.com/Reuters",
+      "login_used": true
+    }
   }
 }

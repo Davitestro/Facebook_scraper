@@ -5,3 +5,4 @@ lxml==4.9.3
 python-dotenv==1.0.0
 pyyaml==6.0.1
 pandas==2.1.4
+tqdm==4.66.1  # Add this for progress bar

@@ -24,6 +24,7 @@ class CommentParser:
             return None
 
         return {
+            "comment": str(text).strip(),
             "text": str(text).strip(),
             "author": str(author).strip() if author else None,
             "replies": int(replies) if replies is not None else 0,
@@ -42,6 +43,7 @@ class CommentParser:
         replies_key = resolved_mapping.get("replies", "replies")
 
         return {
+            "comment": str(element.get(text_key, "")).strip(),
             "text": str(element.get(text_key, "")).strip(),
             "author": str(element.get(author_key, "")).strip() or None,
             "replies": int(element.get(replies_key, 0)) if element.get(replies_key) is not None else 0,
