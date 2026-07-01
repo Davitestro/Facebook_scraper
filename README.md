@@ -1,21 +1,24 @@
 # Facebook Scraper
+## A comprehensive Facebook scraper built with Python and Selenium.
 
-A comprehensive Facebook scraper built with Python and Selenium.
+# Features
 
-## Features
-- Profile scraping
-- Post scraping
-- Comment extraction
-- Multiple output formats (JSON, CSV)
-- Rate limiting
-- Proxy support
-- Docker support
+### Profile Scraping: Extract user profiles, bios, and public details.
 
-## Installation
+### Post Scraping: Collect post text, timestamps, and engagement metrics.
 
-\`\`\`bash
+### Comment Extraction: Parse multi-level comment threads from targeted posts.
+
+### Flexible Data Storage: Export data seamlessly into multiple formats (JSON, CSV).
+
+### Anti-Bot Mitigation: Built-in rate limiting and robust proxy rotation support.
+
+### Containerized Deployment: Ready-to-go Docker configuration for isolated execution.
+
+Installation
+Bash
 # Clone repository
-git clone https://github.com/yourusername/facebook-scraper.git
+gh repo clone Davitestro/Facebook_scraper
 cd facebook-scraper
 
 # Install dependencies
@@ -24,41 +27,32 @@ pip install -r requirements/base.txt
 # Copy environment file
 cp .env.example .env
 # Edit .env with your credentials
-\`\`\`
-
-## Usage
-
-\`\`\`bash
-# Basic usage
+Usage
+Basic Execution
+Bash
 python -m src.main --url https://www.facebook.com/facebook
-
-# With options
+Advanced Execution
+Bash
 python -m src.main --method selenium --url https://www.facebook.com/facebook --output data/export.json --headless
-\`\`\`
-
-## Docker Usage
-
-\`\`\`bash
-# Build image
+Docker Execution
+Bash
+# Build the Docker image
 docker-compose build
 
-# Run scraper
+# Run the scraper container
 docker-compose run --rm scraper python -m src.main --url https://www.facebook.com/facebook
-\`\`\`
+Project Structure Setup
+To mirror the recommended architecture for this project, you can generate the entire directory structure automatically using the following commands:
 
-## Legal Disclaimer
-This tool is for educational purposes only. Always respect Facebook's Terms of Service.
-\`\`\`
-
----
-
-## How to Use This Structure
-
-1. **Clone/Create the structure**:
-```bash
+Bash
+# Create root directory and navigate inside
 mkdir facebook-scraper
 cd facebook-scraper
+
+# Generate core application and testing modules
 mkdir -p src/{scrapers,parsers,storage,utils,exceptions}
 mkdir -p tests/{test_scrapers,test_parsers,test_utils}
+
+# Generate data reservoirs and configuration assets
 mkdir -p data/{raw,processed,exports}
 mkdir -p logs config scripts docs requirements
