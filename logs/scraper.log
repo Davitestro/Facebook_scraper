@@ -72,3 +72,17 @@
 2026-07-01 20:55:51,866 - INFO - Total posts: 5
 2026-07-01 20:55:51,866 - INFO - Duplicates removed: 0
 2026-07-01 20:55:51,866 - INFO - Sample post: French government seen facing no-confidence vote over heatwave handling... Ещё...
+2026-07-01 21:12:22,165 - INFO - Attempting to login...
+2026-07-01 21:13:03,199 - WARNING - Login failed, continuing without login (may limit data)
+2026-07-01 21:13:03,200 - INFO - Starting scrape with selenium from https://www.facebook.com/Reuters
+2026-07-01 21:13:49,550 - INFO - Data saved to data/raw/output.json
+2026-07-01 21:13:49,556 - INFO - Total posts: 0
+2026-07-01 21:13:49,558 - INFO - Duplicates removed: 0
+2026-07-01 21:13:49,558 - WARNING - No posts found! The page might require login or have no content.
+2026-07-01 21:13:56,378 - INFO - Attempting to login...
+2026-07-01 21:14:34,973 - WARNING - Login failed, continuing without login (may limit data)
+2026-07-01 21:14:34,973 - INFO - Starting scrape with selenium from https://www.facebook.com/Reuters
+2026-07-01 21:18:49,838 - INFO - Data saved to data/raw/output.json
+2026-07-01 21:18:49,841 - INFO - Total posts: 20
+2026-07-01 21:18:49,842 - INFO - Duplicates removed: 0
+2026-07-01 21:18:49,842 - INFO - Sample post: ...

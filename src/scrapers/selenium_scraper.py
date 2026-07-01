@@ -1,5 +1,5 @@
 """
-Improved Selenium-based Facebook Scraper with Infinite Scroll & Manual CAPTCHA
+Improved Selenium-based Facebook Scraper with Infinite Scroll & Full Text Expansion
 """
 from typing import Dict, Any, List, Optional, Set
 from selenium import webdriver
@@ -18,7 +18,7 @@ from src.utils.rate_limiter import RateLimiter
 
 
 class SeleniumScraper(BaseScraper):
-    """Improved Facebook scraper with infinite scroll and CAPTCHA handling"""
+    """Improved Facebook scraper with infinite scroll and full text expansion"""
     
     def __init__(self, headless: bool = False, config: Optional[Dict] = None):
         super().__init__(config)
@@ -98,13 +98,13 @@ class SeleniumScraper(BaseScraper):
             # Use non-headless for CAPTCHA handling
             self._setup_driver(headless=False)
             
-            self.logger.info("🌐 Opening Facebook login page...")
+            self.logger.info("Opening Facebook login page...")
             self.driver.get('https://www.facebook.com/login')
             time.sleep(5)
             
             # Check if already logged in
             if 'login' not in self.driver.current_url:
-                self.logger.info("✅ Already logged in!")
+                self.logger.info("Already logged in!")
                 return True
             
             # Fill credentials
@@ -128,9 +128,9 @@ class SeleniumScraper(BaseScraper):
             
             # Check for CAPTCHA
             if self._check_for_captcha():
-                self.logger.info("🔐 CAPTCHA detected!")
-                self.logger.info("👀 Please solve the CAPTCHA in the browser window...")
-                self.logger.info("⏱️ You have 180 seconds to complete it")
+                self.logger.info("CAPTCHA detected!")
+                self.logger.info("Please solve the CAPTCHA in the browser window...")
+                self.logger.info("You have 180 seconds to complete it")
                 
                 # Wait for CAPTCHA to be solved
                 start_time = time.time()
@@ -141,30 +141,30 @@ class SeleniumScraper(BaseScraper):
                     if not self._check_for_captcha():
                         # Check if login was successful
                         if 'login' not in self.driver.current_url:
-                            self.logger.info("✅ CAPTCHA solved and login successful!")
+                            self.logger.info("CAPTCHA solved and login successful!")
                             return True
                     
                     # Check if user manually completed login
                     if 'login' not in self.driver.current_url:
-                        self.logger.info("✅ Login completed manually!")
+                        self.logger.info("Login completed manually!")
                         return True
                     
                     # Show progress every 10 seconds
                     elapsed = int(time.time() - start_time)
                     if elapsed % 10 == 0 and elapsed > 0:
-                        self.logger.info(f"⏳ Waiting for CAPTCHA... ({elapsed}s elapsed)")
+                        self.logger.info(f"Waiting for CAPTCHA... ({elapsed}s elapsed)")
                     
                     time.sleep(2)
                 
-                self.logger.warning("⏰ Timeout waiting for CAPTCHA")
+                self.logger.warning("Timeout waiting for CAPTCHA")
                 return False
             
             # Check if login was successful
             if 'login' not in self.driver.current_url:
-                self.logger.info("✅ Login successful!")
+                self.logger.info("Login successful!")
                 return True
             
-            self.logger.warning("⚠️ Login failed - check credentials")
+            self.logger.warning("Login failed - check credentials")
             return False
             
         except Exception as e:
@@ -175,6 +175,64 @@ class SeleniumScraper(BaseScraper):
             except:
                 pass
             return False
+    
+    def _expand_post_text(self, element) -> str:
+        """Expand truncated post text by clicking 'See more' buttons"""
+        try:
+            # Look for "See more" or "Ещё" buttons
+            see_more_selectors = [
+                'div[role="button"][aria-label*="See more" i]',
+                'div[role="button"][aria-label*="Ещё" i]',
+                'span[role="button"]:contains("See more")',
+                'span[role="button"]:contains("Ещё")',
+                'div[data-testid="post_message"] div[role="button"]',
+                'div[dir="auto"] div[role="button"]'
+            ]
+            
+            for selector in see_more_selectors:
+                try:
+                    buttons = element.find_elements(By.CSS_SELECTOR, selector)
+                    for button in buttons:
+                        if button.is_displayed() and button.text.lower() in ['see more', 'ещё', 'see more...', 'ещё...']:
+                            # Click to expand
+                            self.driver.execute_script("arguments[0].scrollIntoView(true);", button)
+                            time.sleep(0.5)
+                            button.click()
+                            time.sleep(1)
+                            self.logger.debug("Expanded post text")
+                            break
+                except:
+                    continue
+            
+            # Now extract the full text
+            text = ''
+            text_selectors = [
+                'div[data-ad-preview="message"]',
+                'div[data-testid="post_message"]',
+                'div[dir="auto"] span',
+                'div.x1lliihq span',
+                'span[data-offset-key]'
+            ]
+            
+            for selector in text_selectors:
+                try:
+                    text_elements = element.find_elements(By.CSS_SELECTOR, selector)
+                    if text_elements:
+                        text = ' '.join([el.text for el in text_elements if el.text])
+                        if text:
+                            break
+                except:
+                    continue
+            
+            # If still no text, try getting all text from post
+            if not text:
+                text = element.text
+            
+            return text.strip()
+            
+        except Exception as e:
+            self.logger.debug(f"Error expanding text: {e}")
+            return element.text
     
     def _handle_login_overlay(self):
         """Handle Facebook login overlay if it appears"""
@@ -263,7 +321,7 @@ class SeleniumScraper(BaseScraper):
             bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]'
         )
         
-        self.logger.info(f"🎯 Target: {max_posts} posts. Starting infinite scroll...")
+        self.logger.info(f"Target: {max_posts} posts. Starting infinite scroll...")
         
         while len(posts) < max_posts and scroll_attempts < max_scrolls:
             # Get current posts
@@ -279,6 +337,7 @@ class SeleniumScraper(BaseScraper):
                     break
                 
                 try:
+                    # Expand full text before extracting
                     post_data = self._extract_post_data(element)
                     post_id = post_data.get('post_id', '')
                     
@@ -294,14 +353,14 @@ class SeleniumScraper(BaseScraper):
             
             # Check if we reached target
             if len(posts) >= max_posts:
-                self.logger.info(f"✅ Reached target of {max_posts} posts!")
+                self.logger.info(f"Reached target of {max_posts} posts!")
                 break
             
             # Check if no new posts found
             if new_posts_found == 0:
                 self.no_new_posts_count += 1
                 if self.no_new_posts_count >= 5:
-                    self.logger.info(f"📭 No new posts found after {self.no_new_posts_count} scrolls. Reached end of page.")
+                    self.logger.info(f"No new posts found after {self.no_new_posts_count} scrolls. Reached end of page.")
                     break
             else:
                 self.no_new_posts_count = 0
@@ -309,7 +368,7 @@ class SeleniumScraper(BaseScraper):
             # Check if we've reached the bottom
             current_height = self.driver.execute_script("return document.body.scrollHeight")
             if current_height == self.last_height and new_posts_found == 0:
-                self.logger.info("📭 Reached bottom of page (no more content to load)")
+                self.logger.info("Reached bottom of page (no more content to load)")
                 break
             
             # Smooth scroll with random behavior
@@ -335,9 +394,9 @@ class SeleniumScraper(BaseScraper):
         
         # Final status
         if len(posts) >= max_posts:
-            self.logger.info(f"✅ Successfully scraped {len(posts)} posts (target reached)")
+            self.logger.info(f"Successfully scraped {len(posts)} posts (target reached)")
         else:
-            self.logger.info(f"📭 Scraping complete: found {len(posts)} posts (page ended)")
+            self.logger.info(f"Scraping complete: found {len(posts)} posts (page ended)")
         
         return {
             'url': url,
@@ -350,42 +409,23 @@ class SeleniumScraper(BaseScraper):
         }
     
     def _extract_post_data(self, element) -> Dict[str, Any]:
-        """Extract comprehensive post data"""
+        """Extract comprehensive post data with full text expansion"""
         try:
+            # Expand full text first
+            full_text = self._expand_post_text(element)
+            
             # Get post ID
             post_id = element.get_attribute('data-ft') or ''
             post_id_match = re.search(r'"top_level_post_id":"(\d+)"', post_id)
             post_id = post_id_match.group(1) if post_id_match else str(hash(str(element.text)))[:10]
-            
-            # Extract post text
-            text = ''
-            text_selectors = [
-                'div[data-ad-preview="message"]',
-                'div[data-testid="post_message"]',
-                'div[dir="auto"] span',
-                'div.x1lliihq span',
-                'span[data-offset-key]'
-            ]
-            
-            for selector in text_selectors:
-                try:
-                    text_elements = element.find_elements(By.CSS_SELECTOR, selector)
-                    if text_elements:
-                        text = ' '.join([el.text for el in text_elements if el.text])
-                        if text:
-                            break
-                except:
-                    continue
-            
-            if not text:
-                text = element.text.split('See more')[0].strip()
             
             # Extract author
             author = ''
             author_selectors = [
                 'a[role="link"] span',
                 'span.x1iorvi4 span',
-                'h2 span span'
+                'h2 span span',
+                'a[role="link"] strong'
             ]
             for selector in author_selectors:
                 try:
@@ -395,6 +435,14 @@ class SeleniumScraper(BaseScraper):
                         break
                 except:
                     continue
+            
+            # If author still not found, try alternative
+            if not author:
+                try:
+                    author_el = element.find_element(By.CSS_SELECTOR, 'a[role="link"]')
+                    author = author_el.text
+                except:
+                    pass
             
             # Extract timestamp
             timestamp = ''
@@ -437,11 +485,23 @@ class SeleniumScraper(BaseScraper):
             except:
                 pass
             
+            # Extract link preview (URL in post)
+            link_preview = ''
+            try:
+                link_elements = element.find_elements(By.CSS_SELECTOR, 'a[target="_blank"]')
+                for link_el in link_elements:
+                    href = link_el.get_attribute('href')
+                    if href and 'facebook.com' not in href and 'fb.com' not in href:
+                        link_preview = href
+                        break
+            except:
+                pass
+            
             return {
                 'post_id': post_id,
                 'author': author or 'Unknown',
-                'text': text,
-                'full_text': text,
+                'text': full_text,
+                'full_text': full_text,
                 'publish_date': timestamp,
                 'timestamp_iso': self._convert_to_iso(timestamp),
                 'link': link,
@@ -450,6 +510,7 @@ class SeleniumScraper(BaseScraper):
                 'shares': shares,
                 'images': images,
                 'has_video': has_video,
+                'link_preview': link_preview,
                 'scraped_at': datetime.now().isoformat()
             }
             
