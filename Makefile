@@ -10,6 +10,7 @@ help:
 	@echo "  run          Run the scraper"
 
 install:
+	python3 -m venv .venv
 	pip install -r requirements/dev.txt
 
 test:
